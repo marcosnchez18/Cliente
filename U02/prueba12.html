@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista Desplegable en JavaScript</title>
+</head>
+<body>
+    <h2>Selecciona un color:</h2>
+    <select id="colorSelector">
+        <!-- Las opciones se agregarán dinámicamente aquí -->
+    </select>
+
+    <script>
+        // Obtener el elemento select por su ID
+        var select = document.getElementById("colorSelector");
+
+        // Definir un arreglo de colores
+        var colores = ["Rojo", "Azul", "Verde", "Amarillo", "Naranja"];
+
+        // Iterar a través del arreglo de colores y agregar opciones a la lista desplegable
+        for (var i = 0; i < colores.length; i++) {
+            var option = document.createElement("option"); // Crea un elemento de opción
+            option.text = colores[i]; // Establece el texto de la opción
+            select.add(option); // Agrega la opción al select
+        }
+    </script>
+</body>
+</html>

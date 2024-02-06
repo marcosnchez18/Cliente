@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo en tu ciudad</title>
+</head>
+<body>
+    <body>
+        <div>
+       <h1 id="cabecera">¿Que tiempo hace?</h1>
+       <div id="div1"></div>
+       <div id="div2"></div>
+       <div id="div3"></div>
+        </div>
+        <script>
+            debugger;
+            console.log("Depuración iniciada."); // inicio de la depuración. Debe aparecer en google
+            alert("Buenos días, ¿Quieres continuar?");
+            document.write("<p>Resumen de tus datos</p>");
+            document.getElementById("div1").innerHTML = ("Día 1");
+            var entrada = prompt("Introduce la temperatura(se tomará en grados):");
+            var temperatura = parseInt(entrada);
+            document.getElementById("div2").innerHTML = ("<p>La temperatura de hoy es de " + temperatura + "º</p>");
+            var c = confirm("¿Es correcta?");
+            if (c) {var texto = "Sí" } else {var texto = "No" }
+            document.getElementById("div3").innerHTML = ("Es correcta: " + texto);
+        </script>
+        </body>
+</body>
+</html> 

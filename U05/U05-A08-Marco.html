@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+</head>
+
+<body>
+    <form action="mailto:marcoantonio.sanchez.monge@iesdonana.org" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name">Introduce tu nombre:</label>
+            <input type="text" name="name" id="name"><br><br>
+
+            <label for="mensaje">Mensaje</label><br>
+            <textarea name="textarea" rows="10" cols="50">Escriba su mensaje</textarea>
+        </fieldset>
+        <br>
+        <label for="color">Elige un color:</label>
+        <br>
+        <input type="radio" id="color" name="color"  value="rojo">
+        <label for="rojo">Rojo</label>
+        <br>
+        <input type="radio" id="color" name="color" value="verde" >
+        <label for="verde">Verde</label>
+        <br>
+        <input type="radio" id="color" name="color" value="azul" >
+        <label for="azul">Azul</label><br><br>
+
+        <label for="asig">Selecciona una asignatura</label>
+        <select name="asignatura" id="asignatura">
+            <option value="mat">Matemáticas</option>
+            <option value="lengua">Lengua</option>
+            <option value="ingles">Inglés</option>
+        </select>
+
+
+        <p>
+
+            Selecciona los días con disponibilidad:<br>
+
+            <label><input type="checkbox" name="dia" value="lunes"> Lunes</label><br>
+
+            <label><input type="checkbox" name="dia" value="martes"> Martes</label><br>
+
+            <label><input type="checkbox" name="dia" value="miercoles"> Miércoles</label><br>
+
+            <label><input type="checkbox" name="dia" value="jueves"> Jueves</label><br>
+
+            <label><input type="checkbox" name="dia" value="viernes"> Viernes</label><br>
+
+
+        </p>
+
+        <label for="asig">Seleccione el día preferente:</label>
+        <select name="dia-preferente" id="dia">
+            <option value="lunes">Lunes</option>
+            <option value="martes">Martes</option>
+            <option value="miercoles">Miércoles</option>
+            <option value="jueves">Jueves</option>
+            <option value="viernes">Viernes</option>
+        </select>
+        <br><br>
+        <button type="submit">Haz click para enviar información</button>
+        <button type="reset">Comenzar a rellenar de nuevo</button>
+        <button>
+            <a href="https://www.google.es/">Haz click sobre mi</a>
+        </button>
+    </form>
+</body>
+
+</html>

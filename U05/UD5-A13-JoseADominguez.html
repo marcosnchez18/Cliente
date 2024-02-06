@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="UD5-A13-JoseADominguez.js"></script>
+</head>
+<body>
+    <form action="#" method="post">
+        <input id="dni" type="text" placeholder="Introduce DNI" onblur="return validar_dni()"> (Formato valido: 99.999.999-X)<br>
+        <input id="nombre" type="text" placeholder="Introduce Nombre" onblur="return validar_nombre()"> (Introduzca al menos un nombre y un apellido, Max: 2 nombres y 2 apellidos)<br>
+        <input id="fecha" type="text" placeholder="Introduce f.nac"onblur="return validar_fecha()"> (Formato valido: dd/mm/yyyy)<br>
+        <input id="email" type="text" placeholder="Introduce Email" onblur="return validar_email()"> (xxx@yyy.zzz)<br>
+        <input id="web" type="text" placeholder="Introduce pagina web" onblur="return validar_web()"> (Formato valido: http://www.xxx.zzz)<br>
+        <input id="pass1" type="password" placeholder="Introduce contraseña" minlength="8" onblur="return validar_password()"> (Debe contener entre 8 y 10 caracteres)<br>
+        <input id="pass2" type="password" placeholder="Confirmar contraseña" minlength="8" onblur="return validar_password()"> (Debe contener entre 8 y 10 caracteres)<br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

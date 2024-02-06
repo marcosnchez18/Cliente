@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora</title>
+</head>
+<body>
+  <h1>Calculadora</h1>
+  <input type="text" id="num">
+  <div id="buttons">
+    <div class="row">
+      <button onclick="agregar('7')">7</button>
+      <button onclick="agregar('8')">8</button>
+      <button onclick="agregar('9')">9</button>
+      <button onclick="borrar()">&#9003;</button>
+    </div>
+    <div class="row">
+      <button onclick="agregar('4')">4</button>
+      <button onclick="agregar('5')">5</button>
+      <button onclick="agregar('6')">6</button>
+      <button onclick="operador('/')">/</button>
+    </div>
+    <div class="row">
+      <button onclick="agregar('1')">1</button>
+      <button onclick="agregar('2')">2</button>
+      <button onclick="agregar('3')">3</button>
+      <button onclick="operador('*')">*</button>
+    </div>
+    <div class="row">
+      <button onclick="agregar('0')">0</button>
+      <button onclick="agregar('.')">.</button>
+      <button onclick="calcular()">=</button>
+      <button onclick="borrar_todo()">&#9003;&#9003;</button>
+    </div>
+    <div class="row">
+      <button onclick="operador('log')">log</button>
+      <button onclick="agregar(Math.PI)">π</button>
+      <button onclick="calcular_trig('cos')">cos</button>
+      <button onclick="calcular_trig('sin')">sin</button>
+    </div>
+    <div class="row">
+      <button onclick="calcular_trig('tan')">tan</button>
+      <button onclick="raiz_cuadrada()">√</button>
+      <button onclick="potencia(2)">x²</button>
+      <button onclick="potencia(3)">x³</button>
+    </div>
+  </div>
+  
+  <style>
+    #buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</body>
+</html>

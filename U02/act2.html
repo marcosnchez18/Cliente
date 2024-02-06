@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juego</title>
+</head>
+<body>
+    <h2>Seleccione las opciones por favor:</h2>
+    <select id="habitacion">
+        <option value="Comedor">Comedor</option>
+        <option value="Galería">Galería</option>
+        <option value="Sala de Billar">Sala de Billar</option>
+        <option value="Salón de Baile">Salón de Baile</option>
+    </select>
+    <select id="sospechoso">
+        <option value="Sr parker">Sr parker</option>
+        <option value="Sr Van Cleve">Sr Van Cleve</option>
+        <option value="Sra Sparr">Sra Sparr</option>
+        <option value="Sr Kalehoff">Sr Kalehoff</option>
+    </select>
+    <button id="confirma">Aceptar</button>
+
+    <script>
+        document.getElementById("confirma").addEventListener("click", function () {
+            var salas = ["Comedor", "Galería", "Sala de Billar", "Salón de Baile"];
+            var sospechos = ["Sr parker", "Sr Van Cleve", "Sra Sparr", "Sr Kalehoff"];
+            var armas = ["cuchillo", "trofeo", "palo de billar", "veneno"];
+
+            var habitacionElegida = document.getElementById("habitacion").value;
+            var sospechosoElegido = document.getElementById("sospechoso").value;
+
+            var resuelto = false;
+            var mensaje = "";
+
+            for (var i = 0; i < salas.length; i++) {
+                if (habitacionElegida === salas[i] && sospechosoElegido === sospechos[i]) {
+                    resuelto = true;
+                    mensaje = sospechos[i] + " lo hizo en el " + salas[i] + " con el " + armas[i];
+                    break;
+                }
+            }
+
+            if (resuelto) {
+                var confirmacion = confirm(mensaje + "\n¿Deseas confirmar esta acusación?");
+                if (confirmacion) {
+                    alert("¡Confirmado! El misterio ha sido resuelto.");
+                } else {
+                    alert("Misterio no confirmado. Sigue investigando.");
+                }
+            } else {
+                alert("Por favor, intenta nuevamente con una combinación válida.");
+            }
+        });
+    </script>
+</body>
+</html>

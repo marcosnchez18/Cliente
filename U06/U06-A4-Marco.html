@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Alumnos</title>
+</head>
+<body>
+    <h1>Registro de Alumnos</h1>
+    
+    <form id="registroForm">
+        <label for="nombre">Nombre del Alumno:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="modulo1">Servidor</label>
+        <input type="number" id="modulo1" min="0" max="10" required>
+
+        <label for="modulo2">Cliente</label>
+        <input type="number" id="modulo2" min="0" max="10" required>
+
+        <label for="modulo3">Diseño</label>
+        <input type="number" id="modulo3" min="0" max="10" required>
+
+        <button type="button" onclick="agregarAlumno()">Agregar Alumno</button>
+    </form>
+
+    <div id="tablaContainer"></div>
+
+    <script src="U06-A4-Marco.js"></script>
+</body>
+</html>

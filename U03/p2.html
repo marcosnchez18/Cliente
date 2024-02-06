@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cambiar Profundidad de Página</title>
+</head>
+<body>
+    <div>
+        <label for="colorSelector">Selecciona un color:</label>
+        <select id="colorSelector">
+            <option value="default">Por defecto</option>
+            <option value="red">Rojo</option>
+            <option value="green">Verde</option>
+            <option value="blue">Azul</option>
+        </select>
+        <button onclick="cambiarProfundidad()">Cambiar Profundidad</button>
+    </div>
+
+    <div id="div0"></div>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+    <div id="div6"></div>
+    <div id="div7"></div>
+    <div id="div8"></div>
+    <div id="div9"></div>
+    <div id="div10"></div>
+    <div id="div11"></div>
+    <div id="div12"></div>
+    <div id="div13"></div>
+    <div id="div14"></div>
+
+    <script>
+        function cambiarProfundidad() {
+            var colorSelector = document.getElementById("colorSelector");
+            var selectedColor = colorSelector.value;
+            
+            if (selectedColor === "default") {
+                document.body.style.backgroundColor = "white";
+            } else if (selectedColor === "red") {
+                document.body.style.backgroundColor = "red";
+            } else if (selectedColor === "green") {
+                document.body.style.backgroundColor = "green";
+            } else if (selectedColor === "blue") {
+                document.body.style.backgroundColor = "blue";
+            }
+        }
+
+        function info() {
+            // Tu función info() original aquí
+        }
+
+        info(); // Llama a la función info() para mostrar información por defecto al cargar la página
+    </script>
+</body>
+</html>

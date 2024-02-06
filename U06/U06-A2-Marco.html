@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir y Eliminar Nodos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .node {
+            border: 1px solid #b35050;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button onclick="añadir_nodo()">Añadir Nodo</button>
+        <button onclick="borrar_nodo()">Eliminar Nodo</button>
+    </div>
+
+    <div id="container"></div>
+</body>
+<script src="U06-A2-Marco.js"></script>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penalty Shootout Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Penalty Shootout Game</h1>
+  <button onclick="shoot()">Shoot!</button>
+  <p>Goals: <span id="goals">0</span></p>
+  <p>Saves: <span id="saves">0</span></p>
+
+  <script>
+    const jugador = {
+      nombre: "Usuario",
+      puntaje: 0
+    };
+
+    const porteros = [
+      { nombre: "Portero1", atajadas: 0 },
+      { nombre: "Portero2", atajadas: 0 },
+      { nombre: "Portero3", atajadas: 0 }
+    ];
+
+    function shoot() {
+      const resultado = Math.random() < 0.5 ? "Gol" : "Atajada";
+      
+      if (resultado === "Gol") {
+        jugador.puntaje++;
+      } else {
+        const porteroElegido = porteros[Math.floor(Math.random() * porteros.length)];
+        porteroElegido.atajadas++;
+      }
+
+      updateUI();
+    }
+
+    function updateUI() {
+      document.getElementById("goals").innerText = jugador.puntaje;
+      document.getElementById("saves").innerText = porteros.reduce((total, portero) => total + portero.atajadas, 0);
+    }
+  </script>
+</body>
+</html>

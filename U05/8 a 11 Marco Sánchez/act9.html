@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="act9.js"></script>
+</head>
+<body>
+    <form  id="formulario" action="mailto: marco@gmail.com" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Introduce tu nombre:</label>
+            <input type="text" id="nombre" name="nombre" /><br>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea name="mensaje"></textarea>
+        </fieldset>
+
+        <label>Elige color</label><br>
+        <input name="color" value="Rojo" type="radio">Rojo<br>
+        <input name="color" value="Verde" type="radio">Verde<br>
+        <input name="color" value="Azul" type="radio">Azul<br><br>
+
+        <label>Selecciona una asignatura:</label>
+        <select id="asignatura" name="asignatura" onchange="cambiar()">
+            <option name="materias" value="Programacion">Programacion</option>
+            <option name="materias" value="Sistemas">Sistemas</option>
+            <option name="materias" value="Fol" >Fol</option>
+        </select><br><br>
+
+        <label>Selecciona los dias con disponibilidad:</label><br>
+        <input name="Disponibilidad" value="Lunes" type="checkbox">Lunes<br>
+        <input name="Disponibilidad" value="Martes" type="checkbox">Martes<br>
+        <input name="Disponibilidad" value="Miercoles" type="checkbox">Miercoles<br>
+        <input name="Disponibilidad" value="Jueves" type="checkbox">Jueves<br>
+        <input name="Disponibilidad" value="Viernes" type="checkbox">Viernes<br><br>
+
+        <label>Selecciona el dia preferente:</label>
+        <select name="dia_preferente">
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miercoles">Miercoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+        </select><br><br>
+
+        <button>Haz click para enviar informacion</button>
+        <button type="reset">Comenzar a rellenar de nuevo</button>
+        <button type="button" onclick="google()">Haz click sobre mi</button>
+    </form>
+
+</body>
+</html>
